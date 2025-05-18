@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Generator - Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #cdd6ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #16293c;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            color: #444;
+            text-align: justify;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #088af4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #045b9b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #cdd6ff;
+            margin-top: auto;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><u>Welcome to Question Generator!</u></h1>
+        <p>Question Generator is an online tool that automatically generates questions based on provided text.<br> Whether you're a student preparing for an exam or a teacher looking to create practice materials,<br> Question Generator can save your time and effort by generating a variety of question types.</p>
+        <br>
+        <p>With Question Generator, you can generate:</p>
+        <ul>
+            <li>Multiple Choice Questions (MCQs): Each question comes with multiple options, and you need to select the correct answer.</li>
+            <li>True/False Questions: Each question requires you to determine if a given statement is true or false.</li>
+            <li>Short Answer Questions: Each question prompts you to provide a brief answer based on the context.</li>
+        </ul>
+        <p>Getting started is easy. Simply enter the text you want to generate questions from, select the question type and the number of questions you want to generate, and click on the <a href="/get-started">"Generate Questions"</a> button. The generated questions will be displayed on the next page.</p>
+        <p>Start using Question Generator today and make the process of generating questions quick and hassle-free!</p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Question Generator. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

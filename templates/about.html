@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Generator - About Us</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cdd6ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+    
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            color: #0e0e0e;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        ul {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #cdd6ff;
+            margin-top: auto;
+            font-size: 12px;
+        }
+
+        footer p {
+            color: #fffefe;
+            margin: 0;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1>About Us</h1>
+        <p>Welcome to Question Generator! We are a team of passionate individuals dedicated to revolutionizing the question generation process.</p>
+        <p>Our team consists of two group members:</p>
+        <ul>
+            <li>
+                <img src="{{ url_for('static', filename='amritesh.jpeg') }}" alt="Amritesh Shah">
+                <p>Amritesh Shah (192025002)</p>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='pooja.jpeg') }}" alt="Pooja Puri">
+                <p>Pooja Puri (192025019)</p>
+            </li>
+        </ul>
+        <p>Final year students pursuing a degree in Computer Science and Engineering at Royal Global University.</p>
+        <br>
+        <p>We are guided by:</p>
+        <div>
+            <img src="{{ url_for('static', filename='guide.png') }}" alt="Dr. Anupam Das" class="center">
+            <p>Dr. Anupam Das <br>An esteemed Associate Professor of the CSE department at Royal Global University.</p>
+
+        </div>
+        <br>
+        <p>Our aim is to provide an innovative online tool that automates the creation of multiple choice, true/false, and short answer questions. By harnessing the power of technology, we aim to streamline the question generation process, saving valuable time for students and educators alike.</p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Question Generator. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

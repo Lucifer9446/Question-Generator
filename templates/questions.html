@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GENERATED QUESTIONS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #cdd6ff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-number {
+            font-weight: bold;
+        }
+
+        .option-number {
+            font-weight: bold;
+        }
+
+        .correct-answer {
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color:#cdd6ff;
+            margin-top: auto;
+            font-size: 12px;
+        }
+
+        footer p {
+            color: #fff;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GENERATED QUESTIONS</h1>
+    <ul>
+        {% for question in questions %}
+            <li>
+                <span class="question-number">Question {{ question.question_number }}:</span><br>
+                {{ question.question }}<br>
+                {% if question.type == 'mcq' %}
+                    Options:<br>
+                    {{ question.options }}<br>
+                {% elif question.type == 'true-false' %}
+                    Options:<br>
+                    True / False<br>
+                {% endif %}
+                {% if question.type != 'short_answer' %}
+                    <span class="correct-answer">Correct Answer: {{ question.answer }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Question Generator. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
